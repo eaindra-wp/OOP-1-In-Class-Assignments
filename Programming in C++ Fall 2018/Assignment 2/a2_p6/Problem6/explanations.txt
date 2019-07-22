@@ -1,0 +1,23 @@
+/*
+    CH08-320142
+    a2_p6
+    Eaindra Wun Pyae
+    e.wunpyae@jacobs-university.de
+*/
+Problem 2.6 (a)
+When "using namespace std" is commented out, all functions included 
+in the library cannot be used anymore.
+The error messages indicate that getline, cout, string, endl, cin are not
+declared in the scope. So, it means that these functions are not checked
+whether they are included in the library or not and they do not work properly
+anymore.
+So, if we still want to use those functions without "using namespace std", 
+we will have to write "std::cout", "std:: cin" and so on. 
+
+Problem 2.6 (b)
+If "Critter::" is removed from the functions,  the error messages show that 
+the void functions are not declared in the Critter.cpp. Since 
+these two variables are declared in the header file, the connection(namespace)
+is lost if we remove "Critter::" from the functions. 
+So, if we don't want to use this method, we can build a constructor, overload
+the constructor. 
